@@ -10,7 +10,7 @@ public class MethodCallAction implements Action<Object> {
 
     @Override
     public boolean run(Context<Object> context) {
-        while (!context.getValueStack().isEmpty()) {
+        while (context.getValueStack().size() > 1) {
             System.out.println("##### MethodCallAction run 14 " + context.getValueStack().pop());
         }
         return true;

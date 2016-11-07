@@ -1,5 +1,6 @@
 package com.gotc;
 
+import com.gotc.nodes.RootNode;
 import com.gotc.util.Util;
 import org.parboiled.Parboiled;
 import org.parboiled.errors.ParseError;
@@ -15,9 +16,10 @@ public class GOT {
 
     public static void main(String[] args) {
         try {
-            File inputFile = new File("testfile.gotc");
+            String filename = "testfile.gotc";
+            File inputFile = new File(filename);
             String content = Util.parseFile(inputFile);
-            GOTParser parser = Parboiled.createParser(GOTParser.class);
+            GOTParser parser = Parboiled.createParser(GOTParser.class, filename);
             ParsingResult<?> result = new ReportingParseRunner<>(parser.realRoot()).run(content);
             System.out.println(result.hasErrors());
             if (result.hasErrors()) {

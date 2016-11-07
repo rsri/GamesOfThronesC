@@ -1,8 +1,8 @@
 package com.gotc;
 
+import com.gotc.actions.GOTAction;
 import com.gotc.actions.NumberAction;
 import com.gotc.actions.PrintAction;
-import com.gotc.actions.StringAction;
 import com.gotc.actions.VariableAssignAction;
 import com.gotc.actions.arithmetic.DivideOperatorAction;
 import com.gotc.actions.arithmetic.MinusOperatorAction;
@@ -33,8 +33,16 @@ public class GOTParser extends BaseParser<Object> {
     final Rule EOL = Optional(Sequence(ZeroOrMore(FirstOf("\t", "\r", " ")), OneOrMore("\n"), ZeroOrMore(FirstOf("\t", "\r", " ", "\n"))));
     final Rule WHITESPACE = FirstOf(OneOrMore(" "), OneOrMore("\t"));
 
+    final String fileName;
+
+    public GOTParser(String fileName) {
+        this.fileName = fileName;
+    }
+
     public Rule realRoot() {
-        return Sequence(EOL, BEGINPROGRAM, EOL, abstractMethod(), EOL, ENDPROGRAM, EOL);
+        GOTAction action = new GOTAction(fileName);
+        return Sequence(action, Sequence(EOL, BEGINPROGRAM, EOL,
+                abstractMethod(), EOL, ENDPROGRAM, EOL, EOI), action);
     }
 
     Rule abstractMethod() {
@@ -42,15 +50,17 @@ public class GOTParser extends BaseParser<Object> {
     }
 
     Rule mainMethod() {
-        return Sequence(EOL, BEGINMAIN, EOL, statements(),
-                EOL, ENDMAIN, EOL, new MainMethodAction());
+        MainMethodAction action = new MainMethodAction();
+        return Sequence(EOL, Sequence(BEGINMAIN, action), statements(),
+                 ENDMAIN, EOL, action);
     }
 
     Rule method() {
-        return Sequence(EOL, DECLAREMETHOD, WHITESPACE, variable(), EOL,
+        MethodAction action = new MethodAction();
+        return Sequence(Sequence(EOL, Sequence(DECLAREMETHOD, action), WHITESPACE, variable(), EOL,
                 ZeroOrMore(Sequence(METHODARGUMENTS, WHITESPACE, variable()), EOL), EOL,
                 Sequence(Optional(NONVOIDMETHOD), push(NONVOIDMETHOD.equals(match()))), EOL, statements(), EOL,
-                ENDMETHODDECLARATION, EOL, new MethodAction());
+                ENDMETHODDECLARATION, EOL), action);
     }
 
     Rule statements() {
@@ -63,7 +73,7 @@ public class GOTParser extends BaseParser<Object> {
 
     Rule printStatement() {
         return Sequence(EOL, PRINT, WHITESPACE,
-                FirstOf(number(), string()), EOL, new PrintAction());
+                FirstOf(numberNoAction(), string()), EOL, new PrintAction());
     }
 
     Rule assignVariableStatement() {
@@ -141,27 +151,20 @@ public class GOTParser extends BaseParser<Object> {
                 ZeroOrMore(FirstOf(CharRange('A', 'Z'), CharRange('a', 'z'), CharRange('0', '9'))));
     }
 
+    Rule numberNoAction() {
+        return FirstOf(
+                Sequence(OneOrMore(CharRange('0', '9')), push(match())),
+                Sequence(Sequence("-", OneOrMore(CharRange('0', '9'))), push(match())));
+    }
+
     Rule number() {
         return FirstOf(
-                Sequence(OneOrMore(CharRange('0', '9')), push(Long.parseLong(match())), new NumberAction()),
-                Sequence(Sequence("-", OneOrMore(CharRange('0', '9'))), push(Long.parseLong(match())), new NumberAction()));
+                Sequence(OneOrMore(CharRange('0', '9')), push(match()), new NumberAction()),
+                Sequence(Sequence("-", OneOrMore(CharRange('0', '9'))), push(match()), new NumberAction()));
     }
 
     Rule string() {
-        return Sequence(OneOrMore(NoneOf("\n\\\r\"")), push(match()), new StringAction());
+        return Sequence(OneOrMore(NoneOf("\n\\\r\"")), push(match()));
     }
-
-
-//    Rule method() {
-//        // TODO
-////        def Method: Rule1[AbstractMethodNode] = rule {
-////            DeclareMethod ~ WhiteSpace ~ VariableName ~> (s => s) ~ EOL ~
-////                    zeroOrMore((MethodArguments ~ WhiteSpace ~ Variable ~ EOL)) ~
-////                    (NonVoidMethod | "") ~> ((m: String) => m == NonVoidMethod) ~ EOL ~
-////                    zeroOrMore(Statement) ~ EndMethodDeclaration ~~> MethodNode
-////        }
-//        return Sequence(DECLAREMETHOD, WHITESPACE, variableName(), EOL,
-//                ZeroOrMore(methodArguments(), WHITESPACE, variable(), EOL));
-//    }
 
 }

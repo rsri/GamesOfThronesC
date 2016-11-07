@@ -9,8 +9,11 @@ import org.parboiled.Context;
 public class VariableAssignAction implements Action<Object> {
     @Override
     public boolean run(Context<Object> context) {
-        System.out.println("##### VariableAssignAction run 12 varname " + context.getValueStack().pop(1));
-        System.out.println("##### VariableAssignAction run 13 value " + context.getValueStack().pop());
+        String varName = (String) context.getValueStack().pop(1);
+        String value = (String) context.getValueStack().pop();
+        System.out.println("##### VariableAssignAction run 12 varname " + varName);
+        System.out.println("##### VariableAssignAction run 13 value " );
+        //TODO
         return true;
     }
 }

@@ -29,7 +29,7 @@ public class Constants {
     public static final String DIVISIONOPERATOR = "ANYONE CAN BE KILLED";
     public static final String TRUE = "HODOR";
     public static final String NONVOIDMETHOD = "THERE'S NO CURE FOR BEING A CUNT";
-    public static final String ENDIF = "YOU'RE NO SON OF MINE";
+    public static final String ENDIF = "FUCK OFF";
     public static final String MULTIPLICATIONOPERATOR = "YOU GOT FAT";
     public static final String LESSERTHAN = "YOU HAVE LESS HONOR THAN A BACK ALLEY WHORE";
     public static final String PLUSOPERATOR = "GIVE MY REGARDS TO THE NIGHT’S WATCH";
