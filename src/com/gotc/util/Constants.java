@@ -7,6 +7,7 @@ public class Constants {
 
     public static final String PARSEERROR = "If you think this has a happy ending, you haven’t been paying attention";
     public static final String BEGINPROGRAM = "WINTER IS COMING";
+    public static final String METHODPROTOTYPE = "LET ME SEE IT ONE MORE TIME";
     public static final String BEGINMAIN = "VALAR DOHAERIS";
     public static final String MINUSOPERATOR = "STAY LOW";
     public static final String ENDPROGRAM = "MY WATCH HAS ENDED";

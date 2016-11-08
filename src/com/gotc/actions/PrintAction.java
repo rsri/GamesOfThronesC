@@ -1,5 +1,7 @@
 package com.gotc.actions;
 
+import com.gotc.util.DeclarationDictionary;
+import com.gotc.util.Pair;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.parboiled.Action;
@@ -16,19 +18,22 @@ import static org.objectweb.asm.Type.getInternalName;
 public class PrintAction implements Action<Object>, Opcodes {
     @Override
     public boolean run(Context<Object> context) {
-        MethodVisitor methodVisitor = (MethodVisitor) context.getValueStack().peek(context.getValueStack().size() - 1);
+        Pair pair = (Pair) context.getValueStack().peek(context.getValueStack().size() - 1);
+        MethodVisitor methodVisitor = (MethodVisitor) pair.writer;
         Object value = context.getValueStack().pop();
         methodVisitor.visitFieldInsn(GETSTATIC, getInternalName(System.class), "out", getDescriptor(PrintStream.class));
-        methodVisitor.visitLdcInsn(value.toString());
-        methodVisitor.visitMethodInsn(INVOKEVIRTUAL, getInternalName(PrintStream.class), "println", "(Ljava/lang/String;)V", false);
+        DeclarationDictionary dictionary = pair.dictionary;
+        int position = dictionary.getVariableIndex(value.toString());
+        if (position == -1) {
+            methodVisitor.visitLdcInsn(value.toString());
+            methodVisitor.visitMethodInsn(INVOKEVIRTUAL, getInternalName(PrintStream.class), "println", "(Ljava/lang/String;)V", false);
+        } else {
+            methodVisitor.visitVarInsn(ILOAD, position);
+            methodVisitor.visitMethodInsn(INVOKEVIRTUAL, getInternalName(PrintStream.class), "println", "(I)V", false);
+        }
         methodVisitor.visitInsn(RETURN);
         methodVisitor.visitMaxs(2, 2);
         methodVisitor.visitEnd();
-//        if (value instanceof Long) {
-//            System.out.println("##### PrintAction run 14 int " + value);
-//        } else {
-//            System.out.println("##### PrintAction run 16 string " + value);
-//        }
         return true;
     }
 }

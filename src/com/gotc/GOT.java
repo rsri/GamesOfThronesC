@@ -1,6 +1,5 @@
 package com.gotc;
 
-import com.gotc.nodes.RootNode;
 import com.gotc.util.Util;
 import org.parboiled.Parboiled;
 import org.parboiled.errors.ParseError;

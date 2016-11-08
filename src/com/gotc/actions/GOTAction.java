@@ -1,5 +1,7 @@
 package com.gotc.actions;
 
+import com.gotc.util.DeclarationDictionary;
+import com.gotc.util.Pair;
 import com.gotc.util.Util;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
@@ -31,7 +33,7 @@ public class GOTAction implements Action<Object>, Opcodes {
     public boolean run(Context<Object> context) {
         if (preParse) {
             System.out.println("##### GOTAction run 33 "  );
-            classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+            classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
             classWriter.visit(V1_6,
                     ACC_PUBLIC,
                     fileName,
@@ -49,7 +51,7 @@ public class GOTAction implements Action<Object>, Opcodes {
             constructor.visitInsn(RETURN);
             constructor.visitMaxs(1, 1);
             constructor.visitEnd();
-            context.getValueStack().push(0, classWriter);
+            context.getValueStack().push(0, Pair.create(classWriter, new DeclarationDictionary()));
             preParse = false;
         } else {
             System.out.println("##### GOTAction run 55 " );

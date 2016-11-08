@@ -1,5 +1,6 @@
 package com.gotc.actions.method;
 
+import com.gotc.util.Pair;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
@@ -21,7 +22,8 @@ public class MainMethodAction implements Action<Object>, Opcodes {
     public boolean run(Context<Object> context) {
         if (preParse) {
             System.out.println("##### MainMethodAction run 24 " );
-            classWriter = (ClassWriter) context.getValueStack().peek(context.getValueStack().size() - 1);
+            Pair pair = (Pair) context.getValueStack().peek(context.getValueStack().size() - 1);
+            classWriter = (ClassWriter) pair.writer;
             main = classWriter.visitMethod(
                     ACC_PUBLIC + ACC_STATIC,
                     "main",
@@ -29,12 +31,15 @@ public class MainMethodAction implements Action<Object>, Opcodes {
                     null,
                     null
             );
-            context.getValueStack().poke(0, main);
+            pair.writer = main;
+            context.getValueStack().poke(0, pair);
             preParse = false;
         } else {
             System.out.println("##### MainMethodAction run 35 " );
+            main.visitMaxs(1, 1);
             main.visitEnd();
-            context.getValueStack().poke(0, classWriter);
+            Pair pair = (Pair) context.getValueStack().peek(context.getValueStack().size() - 1);
+            pair.writer = classWriter;
         }
         return true;
     }

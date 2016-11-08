@@ -12,10 +12,7 @@ import com.gotc.actions.conditional.*;
 import com.gotc.actions.logical.AndAction;
 import com.gotc.actions.logical.NotAction;
 import com.gotc.actions.logical.OrAction;
-import com.gotc.actions.method.MethodAction;
-import com.gotc.actions.method.MainMethodAction;
-import com.gotc.actions.method.MethodCallAction;
-import com.gotc.actions.method.ReturnAction;
+import com.gotc.actions.method.*;
 import org.parboiled.Action;
 import org.parboiled.BaseParser;
 import org.parboiled.Rule;
@@ -30,7 +27,7 @@ import static com.gotc.util.Constants.*;
 @BuildParseTree
 public class GOTParser extends BaseParser<Object> {
 
-    final Rule EOL = Optional(Sequence(ZeroOrMore(FirstOf("\t", "\r", " ")), OneOrMore("\n"), ZeroOrMore(FirstOf("\t", "\r", " ", "\n"))));
+    final Rule EOL = Sequence(ZeroOrMore(FirstOf("\t", "\r", " ")), OneOrMore("\n"), ZeroOrMore(FirstOf("\t", "\r", " ", "\n")));
     final Rule WHITESPACE = FirstOf(OneOrMore(" "), OneOrMore("\t"));
 
     final String fileName;
@@ -41,43 +38,52 @@ public class GOTParser extends BaseParser<Object> {
 
     public Rule realRoot() {
         GOTAction action = new GOTAction(fileName);
-        return Sequence(action, Sequence(EOL, BEGINPROGRAM, EOL,
-                abstractMethod(), EOL, ENDPROGRAM, EOL, EOI), action);
+        return Sequence(action, Sequence(Optional(EOL), BEGINPROGRAM, EOL,
+                abstractMethod(), ENDPROGRAM, Optional(EOL), EOI), action);
     }
 
     Rule abstractMethod() {
-        return Sequence(EOL, ZeroOrMore(FirstOf(mainMethod(), method())), EOL);
+        return ZeroOrMore(FirstOf(mainMethod(), method(), methodPrototype()));
     }
 
     Rule mainMethod() {
         MainMethodAction action = new MainMethodAction();
-        return Sequence(EOL, Sequence(BEGINMAIN, action), statements(),
+        return Sequence(Optional(EOL), Sequence(BEGINMAIN, action), EOL, statements(),
                  ENDMAIN, EOL, action);
     }
 
     Rule method() {
         MethodAction action = new MethodAction();
-        return Sequence(Sequence(EOL, Sequence(DECLAREMETHOD, action), WHITESPACE, variable(), EOL,
-                ZeroOrMore(Sequence(METHODARGUMENTS, WHITESPACE, variable()), EOL), EOL,
-                Sequence(Optional(NONVOIDMETHOD), push(NONVOIDMETHOD.equals(match()))), EOL, statements(), EOL,
+        return Sequence(Sequence(Optional(EOL), Sequence(DECLAREMETHOD, action), WHITESPACE, variable(), EOL,
+                ZeroOrMore(Sequence(METHODARGUMENTS, WHITESPACE, variable(), EOL)),
+                Sequence(Optional(Sequence(NONVOIDMETHOD, EOL)), push(NONVOIDMETHOD.equals(match().trim()))), Optional(EOL),
+                statements(), Optional(EOL),
                 ENDMETHODDECLARATION, EOL), action);
     }
 
+    Rule methodPrototype() {
+        return Sequence(Sequence(Optional(EOL), METHODPROTOTYPE, WHITESPACE,
+                variable(), WHITESPACE, number(),EOL,
+                ZeroOrMore(Sequence(METHODARGUMENTS, WHITESPACE, variable(), EOL)),
+                Sequence(Optional(Sequence(NONVOIDMETHOD, EOL)), push(NONVOIDMETHOD.equals(match().trim())))),
+                new MethodPrototypeAction());
+    }
+
     Rule statements() {
-        return Sequence(EOL,
+        return Sequence(Optional(EOL),
                 ZeroOrMore(FirstOf(printStatement(), assignVariableStatement(),
                         logicalStatement(), arithmeticStatement(), conditionalStatement(),
                         ifStatement(), whileStatement(), returnStatement(), methodCallStatement())),
-                EOL);
+                Optional(EOL));
     }
 
     Rule printStatement() {
-        return Sequence(EOL, PRINT, WHITESPACE,
+        return Sequence(Optional(EOL), PRINT, WHITESPACE,
                 FirstOf(numberNoAction(), string()), EOL, new PrintAction());
     }
 
     Rule assignVariableStatement() {
-        return Sequence(EOL, ASSIGNVARIABLE, WHITESPACE, variableName(), push(match()),
+        return Sequence(Optional(EOL), ASSIGNVARIABLE, WHITESPACE, variableName(), push(match()),
                 WHITESPACE, expression(), EOL,
                 new VariableAssignAction());
     }
@@ -86,7 +92,7 @@ public class GOTParser extends BaseParser<Object> {
         Rule and = twoOperandStatement(AND, new AndAction());
         Rule or = twoOperandStatement(OR, new OrAction());
         Rule not = Sequence(Sequence(NOT, WHITESPACE, variable()), new NotAction());
-        return Sequence(EOL, OneOrMore(FirstOf(and, or, not)), EOL);
+        return Sequence(Optional(EOL), OneOrMore(FirstOf(and, or, not)), Optional(EOL));
     }
 
     Rule arithmeticStatement() {
@@ -94,39 +100,40 @@ public class GOTParser extends BaseParser<Object> {
         Rule minus = twoOperandStatement(MINUSOPERATOR, new MinusOperatorAction());
         Rule multiply = twoOperandStatement(MULTIPLICATIONOPERATOR, new MultiplyOperatorAction());
         Rule division = twoOperandStatement(DIVISIONOPERATOR, new DivideOperatorAction());
-        return Sequence(EOL, OneOrMore(FirstOf(plus, minus, multiply, division)), EOL);
+        return Sequence(Optional(EOL), OneOrMore(FirstOf(plus, minus, multiply, division)), Optional(EOL));
     }
 
     Rule conditionalStatement() {
         Rule lesserThan = twoOperandStatement(LESSERTHAN, new LesserThanAction());
         Rule equalsTo = twoOperandStatement(EQUALTO, new EqualToAction());
-        return Sequence(EOL, OneOrMore(FirstOf(lesserThan, equalsTo)), EOL);
+        return Sequence(Optional(EOL), OneOrMore(FirstOf(lesserThan, equalsTo)), Optional(EOL));
     }
 
     Rule ifStatement() {
-        return Sequence(Sequence(EOL, IF, WHITESPACE,
+        return Sequence(Sequence(Optional(EOL), IF, WHITESPACE,
                 expression(),
-                EOL, statements(), EOL,
-                ZeroOrMore(Sequence(Sequence(ELSE, EOL, statements(), EOL), new ElseAction())),
+                EOL, statements(), Optional(EOL),
+                ZeroOrMore(Sequence(Sequence(ELSE, EOL, statements(), Optional(EOL)), new ElseAction())),
                 ENDIF, EOL), new IfAction());
     }
 
     Rule whileStatement() {
-        return Sequence(Sequence(EOL, WHILE, WHITESPACE,
+        return Sequence(Sequence(Optional(EOL), WHILE, WHITESPACE,
                 expression(),
-                EOL, statements(), EOL,
+                EOL, statements(), Optional(EOL),
                 ENDWHILE, EOL), new WhileAction());
     }
 
     Rule returnStatement() {
-        return Sequence(EOL, RETURN, Optional(WHITESPACE, expression()),
+        return Sequence(Optional(EOL), RETURN, Optional(WHITESPACE, expression()),
                 EOL, new ReturnAction());
     }
 
     Rule methodCallStatement() {
-        return Sequence(EOL, CALLMETHOD, WHITESPACE, variable(),
+        return Sequence(Optional(EOL), CALLMETHOD, WHITESPACE, variable(),
                 ZeroOrMore(Sequence(WHITESPACE, expression())), EOL,
-                Optional(ASSIGNVARIABLEFROMMETHODCALL, WHITESPACE, variable()), new MethodCallAction());
+                Optional(ASSIGNVARIABLEFROMMETHODCALL, WHITESPACE, variable()),
+                EOL, new MethodCallAction());
     }
 
     Rule expression() {
@@ -135,7 +142,7 @@ public class GOTParser extends BaseParser<Object> {
 
     Rule twoOperandStatement(String operation, Action action) {
        return Sequence(Sequence(operation, WHITESPACE, variable(), WHITESPACE,
-               expression()), action);
+               expression(), EOL), action);
     }
 
     Rule variable() {
@@ -143,7 +150,7 @@ public class GOTParser extends BaseParser<Object> {
     }
 
     Rule bool() {
-        return FirstOf(Sequence(TRUE, push(1)), Sequence(FALSE, push(0)));
+        return FirstOf(Sequence(TRUE, push("1")), Sequence(FALSE, push("0")));
     }
 
     Rule variableName() {

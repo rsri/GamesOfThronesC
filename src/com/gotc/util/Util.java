@@ -1,10 +1,6 @@
 package com.gotc.util;
 
-import com.gotc.nodes.GOTNode;
-
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by srikaram on 06-Nov-16.
@@ -38,4 +34,18 @@ public class Util {
         return String.valueOf(Character.toTitleCase(str.charAt(0))) +
                 str.substring(1);
     }
+
+	public static boolean isNumber(String str) {
+		if (str == null || str.isEmpty()) {
+			return false;
+		}
+		int sz = str.length();
+		int startPos = str.charAt(0) == '-' ? 1 : 0;
+		for (int i = startPos; i < sz; i++) {
+			if (!Character.isDigit(str.charAt(i))) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
