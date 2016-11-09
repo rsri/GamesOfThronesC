@@ -10,6 +10,8 @@ public class DeclarationDictionary {
     private Map<String, Integer> variableMap = new HashMap<>();
     private final Set<MethodDescription> methodDescriptions = new HashSet<>();
 
+    private final Stack<Map<String, Integer>> snapshots = new Stack<>();
+
     public boolean addMethodDescription(String methodName, int argsCount, boolean nonVoid) {
         MethodDescription description = new MethodDescription(methodName, argsCount, nonVoid);
         return methodDescriptions.add(description);
@@ -27,6 +29,16 @@ public class DeclarationDictionary {
     public int getVariableIndex(String varName) {
         Integer value = variableMap.get(varName);
         return value == null ? -1 : value;
+    }
+
+    public void takeSnapshot() {
+        Map<String, Integer> newVariableMap = new HashMap<>(variableMap);
+        snapshots.push(variableMap);
+        variableMap = newVariableMap;
+    }
+
+    public void restoreSnapshot() {
+        variableMap = snapshots.pop();
     }
 
     public void clearVariables() {

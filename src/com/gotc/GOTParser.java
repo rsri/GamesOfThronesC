@@ -110,18 +110,22 @@ public class GOTParser extends BaseParser<Object> {
     }
 
     Rule ifStatement() {
-        return Sequence(Sequence(Optional(EOL), IF, WHITESPACE,
-                expression(),
+        IfElseAction action = new IfElseAction();
+        return Sequence(Sequence(Optional(EOL),
+                Sequence(IF, WHITESPACE, expression(), action.ifAction()),
                 EOL, statements(), Optional(EOL),
-                ZeroOrMore(Sequence(Sequence(ELSE, EOL, statements(), Optional(EOL)), new ElseAction())),
-                ENDIF, EOL), new IfAction());
+                ZeroOrMore(Sequence(Sequence(
+                        Sequence(ELSE, action.elseAction()), EOL, statements(), Optional(EOL)),
+                        action.elseAction())),
+                ENDIF, EOL), action.ifAction());
     }
 
     Rule whileStatement() {
-        return Sequence(Sequence(Optional(EOL), WHILE, WHITESPACE,
-                expression(),
+        WhileAction action = new WhileAction();
+        return Sequence(Sequence(Optional(EOL),
+                Sequence(WHILE, WHITESPACE, expression(), action),
                 EOL, statements(), Optional(EOL),
-                ENDWHILE, EOL), new WhileAction());
+                ENDWHILE, EOL), action);
     }
 
     Rule returnStatement() {
@@ -137,7 +141,7 @@ public class GOTParser extends BaseParser<Object> {
     }
 
     Rule expression() {
-        return FirstOf(number(), variable(), bool());
+        return FirstOf(number(), bool(), variable());
     }
 
     Rule twoOperandStatement(String operation, Action action) {
@@ -150,7 +154,8 @@ public class GOTParser extends BaseParser<Object> {
     }
 
     Rule bool() {
-        return FirstOf(Sequence(TRUE, push("1")), Sequence(FALSE, push("0")));
+        return Sequence(FirstOf(TRUE, FALSE), push(TRUE.equals(match()) ? "1" : "0"));
+//        return FirstOf(Sequence(TRUE, push(1)), Sequence(FALSE, push(0)));
     }
 
     Rule variableName() {

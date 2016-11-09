@@ -24,16 +24,25 @@ public class VariableAssignAction implements Action<Object>, Opcodes {
         DeclarationDictionary dictionary = pair.dictionary;
         int position = dictionary.putVariable(varName);
         int assignedVarPos = dictionary.getVariableIndex(value);
-        if ((!Util.isNumber(value) && assignedVarPos == -1) || position == -1) {
-            BasicParseError parseError = new BasicParseError(context.getInputBuffer(), context.getCurrentIndex(),
-                    "Incorrect variable initialization");
-            context.getParseErrors().add(parseError);
+        if (!Util.isNumber(value) && assignedVarPos == -1) {
+            Util.constructError(context, "Variable not found : " + value);
+            return false;
+        }
+        if (position == -1) {
+            Util.constructError(context, "Variable not found : " + varName);
             return false;
         }
         if (assignedVarPos != -1) {
             visitor.visitVarInsn(ILOAD, assignedVarPos);
         } else {
-            visitor.visitIntInsn(BIPUSH, Integer.parseInt(value));
+            int intVal = Integer.parseInt(value);
+            if (intVal == 0) {
+                visitor.visitInsn(ICONST_0);
+            } else if (intVal == 1) {
+                visitor.visitInsn(ICONST_1);
+            } else {
+                visitor.visitIntInsn(BIPUSH, intVal);
+            }
         }
         visitor.visitVarInsn(ISTORE, position);
         return true;

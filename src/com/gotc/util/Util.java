@@ -1,5 +1,9 @@
 package com.gotc.util;
 
+import org.parboiled.Context;
+import org.parboiled.errors.BasicParseError;
+import org.parboiled.errors.ParserRuntimeException;
+
 import java.io.*;
 
 /**
@@ -48,4 +52,8 @@ public class Util {
 		}
 		return true;
 	}
+
+	public static void constructError(Context<Object> context, String message) {
+        throw new ParserRuntimeException(message + " at " + context.getCurrentIndex());
+    }
 }

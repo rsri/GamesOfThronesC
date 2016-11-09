@@ -1,4 +1,4 @@
-package com.gotc.actions.logical;
+package com.gotc.actions.conditional;
 
 import com.gotc.util.DeclarationDictionary;
 import com.gotc.util.Pair;
@@ -11,11 +11,11 @@ import org.parboiled.Context;
 import org.parboiled.support.ValueStack;
 
 /**
- * Created by srikaram on 06-Nov-16.
+ * Created by srikaram on 09-Nov-16.
  */
-public class AndAction implements Action<Object>, Opcodes {
-    @Override
-    public boolean run(Context<Object> context) {
+abstract class ConditionalAction implements Action<Object>, Opcodes {
+
+    void writeOperation(Context<Object> context, int opcode) {
         ValueStack stack = context.getValueStack();
         String var2 = (String) stack.pop();
         String var1 = (String) stack.pop();
@@ -33,7 +33,6 @@ public class AndAction implements Action<Object>, Opcodes {
         }
         int exprPosition = dictionary.getVariableIndex(var2);
         int intVal = Util.isNumber(var2) ? Integer.parseInt(var2) : -1;
-        visitor.visitJumpInsn(IFEQ, falseLabel);
         if (intVal >= 0) {
             visitor.visitIntInsn(BIPUSH, intVal);
         } else if (exprPosition != -1) {
@@ -41,13 +40,12 @@ public class AndAction implements Action<Object>, Opcodes {
         } else {
             Util.constructError(context, errorMsg + var2);
         }
-        visitor.visitJumpInsn(IFEQ, falseLabel);
+        visitor.visitJumpInsn(opcode, falseLabel);
         visitor.visitInsn(ICONST_1);
         visitor.visitJumpInsn(GOTO, finalLabel);
         visitor.visitLabel(falseLabel);
         visitor.visitInsn(ICONST_0);
         visitor.visitLabel(finalLabel);
         visitor.visitVarInsn(ISTORE, varPosition);
-        return true;
     }
 }

@@ -2,46 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0991924d-cf34-426c-8480-30c62cd07b5f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/ASMTester$MyClassLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/ASMTester.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/GOTJava.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/GOTJavaParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/JavaParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/actions/MainMethodAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/actions/NumberAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/actions/PrintAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/actions/StringAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/actions/VariableAssignAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/util/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GamesOfThronesJava/com/gotjava/util/Util.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/GOT.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/GOT.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/GOTParser.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/GOTParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/GOTAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/GOTAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/PrintAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/PrintAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/VariableAssignAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/VariableAssignAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/DivideOperatorAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/DivideOperatorAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/MinusOperatorAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/MinusOperatorAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/MultiplyOperatorAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/MultiplyOperatorAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/PlusOperatorAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/arithmetic/PlusOperatorAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/method/MainMethodAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/method/MainMethodAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/method/MethodAction.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/actions/method/MethodAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/util/Constants.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/util/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/util/Util.class" afterPath="$PROJECT_DIR$/out/production/GameOfThronesC/com/gotc/util/Util.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/gotc/actions/conditional/ElseAction.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/GOT.java" afterPath="$PROJECT_DIR$/src/com/gotc/GOT.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/GOTParser.java" afterPath="$PROJECT_DIR$/src/com/gotc/GOTParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/GOTAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/GOTAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/PrintAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/PrintAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/VariableAssignAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/VariableAssignAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/DivideOperatorAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/DivideOperatorAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MinusOperatorAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MinusOperatorAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MultiplyOperatorAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MultiplyOperatorAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/PlusOperatorAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/PlusOperatorAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/ArithmeticOperation.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/ArithmeticOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/conditional/EqualToAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/conditional/EqualToAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/conditional/LesserThanAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/conditional/LesserThanAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/conditional/WhileAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/conditional/WhileAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/logical/AndAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/logical/AndAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/logical/NotAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/logical/NotAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/logical/OrAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/logical/OrAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/actions/method/MethodAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/method/MethodAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/util/Constants.java" afterPath="$PROJECT_DIR$/src/com/gotc/util/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/util/DeclarationDictionary.java" afterPath="$PROJECT_DIR$/src/com/gotc/util/DeclarationDictionary.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gotc/util/Util.java" afterPath="$PROJECT_DIR$/src/com/gotc/util/Util.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testfile.gotc" afterPath="$PROJECT_DIR$/testfile.gotc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gotc/actions/conditional/IfAction.java" afterPath="$PROJECT_DIR$/src/com/gotc/actions/conditional/IfElseAction.java" />
     </list>
     <ignored path="GamesOfThronesJava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,21 +43,98 @@
       <file leaf-file-name="AndAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/logical/AndAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="624">
+              <caret line="49" column="50" selection-start-line="24" selection-start-column="8" selection-end-line="49" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArithmeticOperation.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/arithmetic/ArithmeticOperation.java">
+      <file leaf-file-name="GOTParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/GOTParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+            <state relative-caret-position="218">
+              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IfElseAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/IfElseAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="893">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="e#2178#2179#0" expanded="true" />
+                <element signature="e#2209#2210#0" expanded="true" />
+                <element signature="e#2251#2252#0" expanded="true" />
+                <element signature="e#2284#2285#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeclarationDictionary.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/util/DeclarationDictionary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VariableAssignAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/VariableAssignAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WhileAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/WhileAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/PrintAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMethodAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gotc/util/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,11 +159,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/gotc/GOTJavaParser.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/ModuloOperatorAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/logical/EqualToAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/LesserThanAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/EqualToAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/ElseAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/method/MainAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/method/ReturnAction.java" />
@@ -126,10 +177,6 @@
         <option value="$PROJECT_DIR$/src/com/gotc/nodes/WhileNode.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/nodes/IfElseNode.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/method/MethodCallAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/logical/NotAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/logical/OrAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/logical/AndAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/WhileAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/IfAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/nodes/GOTNode.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/nodes/AssignVariableNode.java" />
@@ -141,20 +188,28 @@
         <option value="$PROJECT_DIR$/src/com/gotc/util/Pair.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/util/Constants.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/GOTAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/PrintAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/VariableAssignAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/GOT.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/method/MethodPrototypeAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/util/DeclarationDictionary.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/method/MethodAction.java" />
-        <option value="$PROJECT_DIR$/src/com/gotc/GOTParser.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/DivideOperatorAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MinusOperatorAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MultiplyOperatorAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/PlusOperatorAction.java" />
         <option value="$PROJECT_DIR$/src/com/gotc/actions/arithmetic/ArithmeticOperation.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/util/Util.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/VariableAssignAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/PrintAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/logical/OrAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/logical/NotAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/logical/AndAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/ConditionalAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/EqualToAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/LesserThanAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/util/DeclarationDictionary.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/WhileAction.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/GOTParser.java" />
+        <option value="$PROJECT_DIR$/src/com/gotc/actions/conditional/IfElseAction.java" />
       </list>
     </option>
   </component>
@@ -196,6 +251,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,15 +407,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="conditional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GamesOfThronesC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GamesOfThronesJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gotc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="arithmetic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -572,7 +653,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -580,10 +661,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3275218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -593,7 +675,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -611,16 +692,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java</url>
-          <line>41</line>
+          <url>file://$PROJECT_DIR$/src/com/gotc/actions/conditional/IfElseAction.java</url>
+          <line>24</line>
           <properties />
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/gotc/actions/conditional/IfElseAction.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="18" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -629,59 +716,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/IfAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/LesserThanAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/EqualToAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/ElseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/method/MethodCallAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/StringAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/nodes/GOTNode.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/nodes/AssignVariableNode.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/nodes/PrintNode.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/NumberAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/jre/lib/rt.jar!/sun/nio/ch/IOUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/asm-all-5.1.jar!/org/objectweb/asm/MethodVisitor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -745,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,15 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/asm-all-4.1-sources.jar!/org/objectweb/asm/MethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="645" column="22" selection-start-line="645" selection-start-column="22" selection-end-line="645" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,15 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="736" column="0" selection-start-line="736" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/asm-all-4.1-sources.jar!/org/objectweb/asm/MethodWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="446" column="47" selection-start-line="446" selection-start-column="47" selection-end-line="446" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -837,60 +852,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/parboiled-core-1.1.7-sources.jar!/org/parboiled/MatcherContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="364" column="27" selection-start-line="364" selection-start-column="27" selection-end-line="364" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/PrintAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gotc/GOT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/util/DeclarationDictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <folding>
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -904,30 +870,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/method/MethodAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MinusOperatorAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,28 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/GOTParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5678#5679#0" expanded="true" />
-            <element signature="e#5738#5739#0" expanded="true" />
-            <element signature="e#5955#5956#0" expanded="true" />
-            <element signature="e#6017#6018#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/asm-all-4.1-sources.jar!/org/objectweb/asm/Opcodes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -999,29 +923,223 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/logical/AndAction.java">
+    <entry file="jar://$USER_HOME$/.ideaLibSources/parboiled-core-1.1.7-sources.jar!/org/parboiled/matchers/SequenceMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/VariableAssignAction.java">
+    <entry file="jar://$USER_HOME$/.ideaLibSources/parboiled-core-1.1.7-sources.jar!/org/parboiled/MatcherContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        <state relative-caret-position="219">
+          <caret line="359" column="0" selection-start-line="359" selection-start-column="0" selection-end-line="359" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/parboiled-core-1.1.7-sources.jar!/org/parboiled/parserunners/BasicParseRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="e#3064#3065#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/parboiled-core-1.1.7-sources.jar!/org/parboiled/matchers/ActionMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/asm-all-4.1-sources.jar!/org/objectweb/asm/MethodWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="1238" column="16" selection-start-line="1238" selection-start-column="16" selection-end-line="1238" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/asm-all-4.1-sources.jar!/org/objectweb/asm/MethodVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="649" column="5" selection-start-line="649" selection-start-column="5" selection-end-line="649" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/logical/NotAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/logical/OrAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/logical/AndAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="49" column="50" selection-start-line="24" selection-start-column="8" selection-end-line="49" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/EqualToAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="0" selection-start-line="7" selection-start-column="27" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/LesserThanAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/ConditionalAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="39" column="9" selection-start-line="33" selection-start-column="8" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/PrintAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/arithmetic/MinusOperatorAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#291#292#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/arithmetic/ArithmeticOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        <state relative-caret-position="164">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="623" column="43" selection-start-line="623" selection-start-column="38" selection-end-line="623" selection-end-column="43" />
+          <folding>
+            <element signature="e#24298#24299#0" expanded="false" />
+            <element signature="e#24363#24364#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="239" column="6" selection-start-line="239" selection-start-column="6" selection-end-line="239" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/method/MainMethodAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/GOTParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/VariableAssignAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/util/DeclarationDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/IfElseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#2178#2179#0" expanded="true" />
+            <element signature="e#2209#2210#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2284#2285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gotc/actions/conditional/WhileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -31,9 +31,6 @@ public class PrintAction implements Action<Object>, Opcodes {
             methodVisitor.visitVarInsn(ILOAD, position);
             methodVisitor.visitMethodInsn(INVOKEVIRTUAL, getInternalName(PrintStream.class), "println", "(I)V", false);
         }
-        methodVisitor.visitInsn(RETURN);
-        methodVisitor.visitMaxs(2, 2);
-        methodVisitor.visitEnd();
         return true;
     }
 }

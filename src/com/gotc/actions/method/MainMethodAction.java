@@ -36,10 +36,12 @@ public class MainMethodAction implements Action<Object>, Opcodes {
             preParse = false;
         } else {
             System.out.println("##### MainMethodAction run 35 " );
-            main.visitMaxs(1, 1);
+            main.visitInsn(RETURN);
+            main.visitMaxs(100, 100);
             main.visitEnd();
             Pair pair = (Pair) context.getValueStack().peek(context.getValueStack().size() - 1);
             pair.writer = classWriter;
+            pair.dictionary.clearVariables();
         }
         return true;
     }

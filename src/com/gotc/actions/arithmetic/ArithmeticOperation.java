@@ -26,9 +26,7 @@ abstract class ArithmeticOperation implements Action<Object>, Opcodes {
         if (varPosition != -1) {
             visitor.visitVarInsn(ILOAD, varPosition);
         } else {
-            BasicParseError parseError = new BasicParseError(context.getInputBuffer(), context.getCurrentIndex(),
-                    "Variable not found : " + variable);
-            context.getParseErrors().add(parseError);
+            Util.constructError(context, "Variable not found : " + variable);
             return false;
         }
         if (Util.isNumber(expression)) {
@@ -38,9 +36,7 @@ abstract class ArithmeticOperation implements Action<Object>, Opcodes {
             if (position != -1) {
                 visitor.visitVarInsn(ILOAD, position);
             } else {
-                BasicParseError parseError = new BasicParseError(context.getInputBuffer(), context.getCurrentIndex(),
-                        "Variable not found : " + expression);
-                context.getParseErrors().add(parseError);
+                Util.constructError(context, "Variable not found : " + expression);
                 return false;
             }
         }
