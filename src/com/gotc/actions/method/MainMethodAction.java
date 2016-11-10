@@ -20,10 +20,12 @@ public class MainMethodAction implements Action<Object>, Opcodes {
 
     @Override
     public boolean run(Context<Object> context) {
+        Pair pair = (Pair) context.getValueStack().peek(context.getValueStack().size() - 1);
         if (preParse) {
             System.out.println("##### MainMethodAction run 24 " );
-            Pair pair = (Pair) context.getValueStack().peek(context.getValueStack().size() - 1);
             classWriter = (ClassWriter) pair.writer;
+            pair.dictionary.addMethod("main", 1, false);
+            pair.dictionary.setCurrentMethod(pair.dictionary.getMethod("main", 1));
             main = classWriter.visitMethod(
                     ACC_PUBLIC + ACC_STATIC,
                     "main",
@@ -32,16 +34,15 @@ public class MainMethodAction implements Action<Object>, Opcodes {
                     null
             );
             pair.writer = main;
-            context.getValueStack().poke(0, pair);
+            pair.dictionary.putVariable("-1"); // Replacement for String[] args
             preParse = false;
         } else {
             System.out.println("##### MainMethodAction run 35 " );
+            pair.writer = classWriter;
+            pair.dictionary.clearVariables();
             main.visitInsn(RETURN);
             main.visitMaxs(100, 100);
             main.visitEnd();
-            Pair pair = (Pair) context.getValueStack().peek(context.getValueStack().size() - 1);
-            pair.writer = classWriter;
-            pair.dictionary.clearVariables();
         }
         return true;
     }

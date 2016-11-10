@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GameOfThronesC:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GameOfThronesC_jar</output-path>
+    <root id="archive" name="GameOfThronesC.jar">
+      <element id="module-output" name="GameOfThronesC" />
+      <element id="library" level="project" name="asm-all-5.1" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/asm-all-5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/parboiled-core-1.1.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/parboiled-java-1.1.7.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

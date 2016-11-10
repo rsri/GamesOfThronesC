@@ -22,6 +22,9 @@ public class VariableAssignAction implements Action<Object>, Opcodes {
         Pair pair = (Pair) stack.peek(stack.size() - 1);
         MethodVisitor visitor = (MethodVisitor) pair.writer;
         DeclarationDictionary dictionary = pair.dictionary;
+        if (dictionary.getVariableIndex(varName) != -1) {
+            Util.constructError(context, "Duplicate variable declaration : " + varName);
+        }
         int position = dictionary.putVariable(varName);
         int assignedVarPos = dictionary.getVariableIndex(value);
         if (!Util.isNumber(value) && assignedVarPos == -1) {

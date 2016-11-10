@@ -22,11 +22,11 @@ public class GOTAction implements Action<Object>, Opcodes {
 
     private boolean preParse = true;
 
-    private final String fileName;
+    private final String className;
     private ClassWriter classWriter;
 
     public GOTAction(String fileName) {
-        this.fileName = Util.capitalize(Util.getBaseName(fileName));
+        this.className = Util.capitalize(Util.getBaseName(fileName));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class GOTAction implements Action<Object>, Opcodes {
             classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
             classWriter.visit(V1_6,
                     ACC_PUBLIC,
-                    fileName,
+                    className,
                     null,
                     getInternalName(Object.class),
                     null);
@@ -51,14 +51,17 @@ public class GOTAction implements Action<Object>, Opcodes {
             constructor.visitInsn(RETURN);
             constructor.visitMaxs(1, 1);
             constructor.visitEnd();
-            context.getValueStack().push(0, Pair.create(classWriter, new DeclarationDictionary()));
+            DeclarationDictionary dictionary = new DeclarationDictionary();
+            dictionary.setClassName(className);
+            context.getValueStack().push(0, Pair.create(classWriter, dictionary));
             preParse = false;
         } else {
             System.out.println("##### GOTAction run 55 " );
             classWriter.visitEnd();
+            context.getValueStack().pop();
             try {
                 FileOutputStream os;
-                File file = new File(fileName + ".class");
+                File file = new File(className + ".class");
                 file.createNewFile();
                 os = new FileOutputStream(file);
                 os.write(classWriter.toByteArray());

@@ -56,4 +56,15 @@ public class Util {
 	public static void constructError(Context<Object> context, String message) {
         throw new ParserRuntimeException(message + " at " + context.getCurrentIndex());
     }
+
+    public static String buildMethodSignature(int size, boolean nonVoidMethod) {
+        StringBuilder sb = new StringBuilder();
+        sb.append('(');
+        while (size-- > 0) {
+            sb.append('I');
+        }
+        sb.append(')');
+        sb.append(nonVoidMethod ? 'I' : 'V');
+        return sb.toString();
+    }
 }
