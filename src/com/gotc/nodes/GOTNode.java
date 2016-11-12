@@ -13,8 +13,7 @@ import org.parboiled.trees.MutableTreeNodeImpl;
 public abstract class GOTNode extends MutableTreeNodeImpl<GOTNode> implements Opcodes {
 
     public GOTNode addChild(GOTNode child) {
-        int index = getChildren().size();
-        addChild(index, child);
+        addChild(0, child);
         return child;
     }
 

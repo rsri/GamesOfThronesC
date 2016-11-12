@@ -25,7 +25,7 @@ public class PrintNode extends OneOperandNode {
         mVisitor.visitFieldInsn(GETSTATIC, getInternalName(System.class), "out",
                 getDescriptor(PrintStream.class));
         int position = dict.getVariableIndex(getExpression());
-        if (position != -1) {
+        if (position == -1) {
             mVisitor.visitLdcInsn(getExpression());
             mVisitor.visitMethodInsn(INVOKEVIRTUAL,
                     getInternalName(PrintStream.class), "println",

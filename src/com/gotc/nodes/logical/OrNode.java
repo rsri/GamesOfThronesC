@@ -23,6 +23,7 @@ public class OrNode extends TwoOperandNode {
         Label finalLabel = new Label();
         int varPosition = dict.getVariableIndex(getVar());
         visitVariable(mVisitor, varPosition, getVar());
+        mVisitor.visitJumpInsn(IFNE, eitherTrue);
         visitExpression(mVisitor, getExpr(), dict);
         mVisitor.visitJumpInsn(IFEQ, bothFalse);
         mVisitor.visitLabel(eitherTrue);

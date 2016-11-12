@@ -4,6 +4,7 @@ import org.parboiled.Context;
 import org.parboiled.errors.BasicParseError;
 import org.parboiled.errors.ParserRuntimeException;
 import org.parboiled.errors.ParsingException;
+import org.parboiled.support.StringVar;
 
 import java.io.*;
 
@@ -71,5 +72,13 @@ public class Util {
         sb.append(')');
         sb.append(nonVoidMethod ? 'I' : 'V');
         return sb.toString();
+    }
+
+    public static StringVar[] cast(Object[] objs) {
+        StringVar[] vars = new StringVar[objs.length];
+        for (int i = 0 ; i < vars.length ; i++) {
+            vars[i] = (StringVar) objs[i];
+        }
+        return vars;
     }
 }

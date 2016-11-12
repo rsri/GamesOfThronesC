@@ -36,7 +36,6 @@ public class IfElseNode extends GOTNode {
     }
 
     public GOTNode ifNode(StringVar expression) {
-        System.out.println("##### IfElseNode ifNode 39 " );
         if (ifNode == null) {
             ifNode = new IfNode(expression);
         }
@@ -44,7 +43,6 @@ public class IfElseNode extends GOTNode {
     }
 
     public GOTNode elseNode() {
-        System.out.println("##### IfElseNode elseNode 47 " );
         if (elseNode == null) {
             elseNode = new ElseNode();
         }

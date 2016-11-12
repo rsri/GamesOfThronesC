@@ -19,7 +19,7 @@ public class VariableAssignNode extends TwoOperandNode {
     @Override
     public void build(MethodVisitor mVisitor, DeclarationDictionary dict) {
         int position = dict.putVariable(getVar());
-        if (position != -1) {
+        if (position == -1) {
             Util.constructError("Duplicate variable declaration %s", getVar());
         }
         visitExpression(mVisitor, getExpr(), dict);

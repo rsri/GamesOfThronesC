@@ -3,17 +3,16 @@ package com.gotc.util;
 /**
  * Created by srikaram on 06-Nov-16.
  */
-public interface Constants {
+public interface Dialogues {
 
     String PARSEERROR = "IF YOU THINK THIS HAS A HAPPY ENDING, YOU HAVEN’T BEEN PAYING ATTENTION";
-    String BEGINPROGRAM = "WINTER IS COMING";
-    String METHODPROTOTYPE = "LET ME SEE IT ONE MORE TIME";
+    String BEGINCLASS = "WINTER IS COMING";
     String BEGINMAIN = "VALAR DOHAERIS";
     String MINUSOPERATOR = "STAY LOW";
-    String ENDPROGRAM = "MY WATCH HAS ENDED";
+    String ENDCLASS = "MY WATCH HAS ENDED";
     String ENDMAIN = "VALAR MORGHULIS";
-    String PRINT = "DRACARYS";
-    String EQUALTO = "POWER IS POWER";
+    String PRINT = "LET ME SEE IT ONE MORE TIME";
+    String EQUALTO = "I AM YOURS AND YOU ARE MINE";
     String FALSE = "YOU KNOW NOTHING";
     String ELSE = "SHAME";
     String WHILE = "MY REIGN HAS JUST BEGUN";
@@ -35,7 +34,6 @@ public interface Constants {
     String LESSERTHAN = "YOU HAVE LESS HONOR THAN A BACK ALLEY WHORE";
     String PLUSOPERATOR = "GIVE MY REGARDS TO THE NIGHT’S WATCH";
     String OR = "YOU WIN OR YOU DIE";
-
-    String IF = "IF";
+    String IF = "ARE YOU A VIRGIN";
 
 }
