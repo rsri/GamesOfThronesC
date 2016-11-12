@@ -31,25 +31,24 @@ public class GOT {
                 System.err.println(exception + "\nUsage: GOT [-c|-r|-cr] [FileToSourceCode|FileToClassFile]");
                 return;
             }
-            System.out.println(Arrays.toString(args));
             String filename = args[1];
             File inputFile = new File(filename);
-            System.out.println(inputFile);
             if (!inputFile.exists()) {
                 RuntimeException exception = new RuntimeException(Dialogues.PARSEERROR);
                 System.out.println(exception + String.format("\nFile %s doesn't exist.", inputFile.getAbsolutePath()));
                 return;
             }
+            String className = Util.getBaseName(filename);
             switch (args[0].toLowerCase()) {
                 case COMPILE_ONLY:
                     compile(inputFile);
                     return;
                 case RUN_ONLY:
-                    Runner.run(filename);
+                    Runner.run(className);
                     return;
                 case COMPILE_AND_RUN:
                     compile(inputFile);
-                    Runner.run(filename);
+                    Runner.run(className);
                     return;
                 default:
                     RuntimeException exception = new RuntimeException(Dialogues.PARSEERROR);

@@ -16,7 +16,7 @@ public class Runner {
             if (!file.exists()) {
                 return false;
             }
-            URL url = file.toURI().toURL();
+            URL url = file.getAbsoluteFile().getParentFile().toURI().toURL();
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);
             Class<?> clazz = cl.loadClass(className);
