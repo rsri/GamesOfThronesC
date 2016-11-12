@@ -1,10 +1,12 @@
 package com.gotc;
 
+import com.gotc.components.GOTParser;
+import com.gotc.nodes.GOTNode;
+import com.gotc.util.Constants;
 import com.gotc.util.Util;
 import org.parboiled.Parboiled;
-import org.parboiled.errors.ParseError;
-import org.parboiled.parserunners.BasicParseRunner;
-import org.parboiled.parserunners.RecoveringParseRunner;
+import org.parboiled.common.FileUtils;
+import org.parboiled.errors.ErrorUtils;
 import org.parboiled.parserunners.ReportingParseRunner;
 import org.parboiled.support.ParsingResult;
 
@@ -19,17 +21,17 @@ public class GOT {
         try {
             String filename = "testfile.gotc";
             File inputFile = new File(filename);
-            String content = Util.parseFile(inputFile);
-            GOTParser parser = Parboiled.createParser(GOTParser.class, filename);
+            String content = FileUtils.readAllText(inputFile);
+            String className = Util.getBaseName(filename);
+            GOTParser parser = Parboiled.createParser(GOTParser.class, className);
             ParsingResult<?> result = new ReportingParseRunner<>(parser.realRoot()).run(content);
             System.out.println(result.hasErrors());
             if (result.hasErrors()) {
-                for (ParseError error : result.parseErrors) {
-                    System.out.println(content.charAt(error.getStartIndex()) + " " + content.charAt(error.getEndIndex()));
-                }
+                RuntimeException exception = new RuntimeException(Constants.PARSEERROR);
+                System.out.println(exception + "\n" + ErrorUtils.printParseErrors(result));
+            } else {
+                ((GOTNode) result.parseTreeRoot.getValue()).build();
             }
-//            Object value = result.parseTreeRoot.getValue();
-//            System.out.println(value);
         } catch (Throwable e) {
             e.printStackTrace();
         }

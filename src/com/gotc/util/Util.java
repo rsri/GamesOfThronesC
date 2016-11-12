@@ -3,6 +3,7 @@ package com.gotc.util;
 import org.parboiled.Context;
 import org.parboiled.errors.BasicParseError;
 import org.parboiled.errors.ParserRuntimeException;
+import org.parboiled.errors.ParsingException;
 
 import java.io.*;
 
@@ -12,15 +13,15 @@ import java.io.*;
 public class Util {
 
     public static String parseFile(File inputFile) throws IOException {
-        StringWriter contentWriter = new StringWriter();
+        StringBuilder contentWriter = new StringBuilder();
         FileReader input = new FileReader(inputFile);
         BufferedReader bufRead = new BufferedReader(input);
         String singleLine;
         while ((singleLine = bufRead.readLine()) != null) {
-            contentWriter.write(singleLine);
-            contentWriter.write("\n");
+            contentWriter.append(singleLine);
+            contentWriter.append('\n');
         }
-        return contentWriter.toString();
+        return contentWriter.deleteCharAt(contentWriter.length() - 1).toString();
     }
 
     public static String getBaseName(String filename) {
@@ -55,6 +56,10 @@ public class Util {
 
 	public static void constructError(Context<Object> context, String message) {
         throw new ParserRuntimeException(message + " at " + context.getCurrentIndex());
+    }
+
+    public static void constructError(String message, String... args) {
+        throw new ParsingException(String.format(message, args));
     }
 
     public static String buildMethodSignature(int size, boolean nonVoidMethod) {
