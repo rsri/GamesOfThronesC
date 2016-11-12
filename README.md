@@ -14,8 +14,8 @@ java -jar GameOfThronesC.jar [-c|-r|-cr] [FileToSourceCode|FileToClassFile]
 ```
 
 where,
-`-c` denotes the source file needs only to be compiled and not run - source code is fed in this case
-`-r` denotes the compiled class file needs to be run - a .class file created with GOTC is fed in this case
-`-cr` denotes the source file needs to be compiled and run after that - source code is fed again
+- `-c` denotes the source file needs only to be compiled and not run - source code is fed in this case
+- `-r` denotes the compiled class file needs to be run - a .class file created with GOTC is fed in this case
+- `-cr` denotes the source file needs to be compiled and run after that - source code is fed again
 
 Feel free to contribute/make changes.
